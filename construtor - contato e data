@@ -1,0 +1,174 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+class Data
+{
+	private:
+		int dia;
+		int mes;
+		int ano;
+		int id;
+		
+	public:
+		int dia1=18;
+		int mes1=05;
+		int ano1=2021;
+		Data(int dia, int mes, int ano, int idade2)
+		{
+			this->dia = dia;
+			this->mes = mes;
+			this->ano = ano;
+			this->id = id;
+		}
+		
+		Data()
+		{
+			this->dia = 0;
+			this->mes = 0;
+			this->ano = 0;
+			this->id = 0;
+		}
+		
+		void setDia(int dia)
+		{
+			this->dia = dia;
+		}
+		
+		void setMes(int mes)
+		{
+			this->mes = mes;
+		}
+
+		void setAno(int ano)
+		{
+			this->ano = ano;
+		}
+		void setId(int id)
+		{
+			this->id = id;
+		}
+		
+		int getDia()
+		{
+			return this->dia;
+		}
+		
+		int getMes()
+		{
+			return this->mes;
+		}
+
+		int getAno()
+		{
+			return this->ano;
+		}
+		int getId()
+		{
+			return this->id;
+		}
+        
+		
+		string getData()
+        {
+        	Data *calc;
+        	
+        	calc = new Data(this->dia, this->mes, this->ano, this->id);
+        	
+        	if(dia<=dia1 && mes<=mes1)
+			{
+				this->id = ano1-ano;
+			}
+			else
+			{
+				this->id = (ano1-ano)-1;
+			}
+ 	        return to_string(this->id) + " anos";
+        }
+        
+};
+
+class Contato
+{
+private:
+		string email;
+		string nome;
+		string telefone;
+		
+public:
+		Contato(string email, string nome, string telefone)
+		{
+			this->email = email;
+			this->nome = nome;
+			this->telefone = telefone;
+		}
+		Contato()
+		{
+			this->email = " ";
+			this->nome = " ";
+			this->telefone = " ";
+		}
+		void setEmail(string email)
+		{
+			this->email = email;
+		}
+		void setNome(string nome)
+		{
+			this->nome = nome;
+		}
+		void setTelefone(string telefone)
+		{
+			this->telefone = telefone;
+		}
+		
+			string getEmail()
+		{
+			return this->email;
+		}
+			string getNome()
+		{
+			return this->nome;
+		}
+			string getTelefone()
+		{
+			return this->telefone;
+		}
+		
+		string getDados()
+        {
+ 	        return "- Email: " + this->email + "\n" + "- Nome: " + this->nome + "\n" + "- Telefone: " + this->telefone + "\n";
+        }		
+};
+int main(int argc, char** argv)
+{
+    for (int i)
+	string email, nome, telefone;
+	int dia, mes, ano, id;
+		
+	cout << "Digite o seu e-mail:" << endl;
+	cin >> email;
+	
+	cout << "Digite o seu primeiro nome:" << endl;
+	cin >> nome;
+	
+	cout << "Digite o seu telefone:" << endl;
+	cin >> telefone;
+	
+	
+	cout << "sua data de aniversário"
+	cout << "Digite o dia: " << endl;
+	cin >> dia;
+	cout << "Digite o mês: " << endl;
+	cin >> mes;
+	cout << "Digite o ano: " << endl;
+	cin >> ano;
+	
+
+	system("cls");
+	Contato *dados = new Contato(email, nome, telefone);
+	cout << dados->getDados() << endl;
+	Data *calc = new Data(dia, mes, ano, id);
+	cout << calc->getData() << endl;
+
+	return 0;
+}
